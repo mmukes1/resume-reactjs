@@ -12,7 +12,7 @@ class App extends Component {
           <div className="profile-container">
             <img
               className="profile img-meenu"
-              src="assets/images/profile.png"
+              src={resume.image}
               alt=""
             />
             <h1 className="name">{resume.name}</h1>
@@ -23,7 +23,7 @@ class App extends Component {
             <ul className="list-unstyled contact-list">
               <li className="email">
                 <i className="fas fa-envelope" />
-                <a href="mailto: yourname@email.com">{resume.contactEmail}</a>
+                <a href="mailto: ${resume.email}">{resume.contactEmail}</a>
               </li>
               <li className="phone">
                 <i className="fas fa-phone" />
@@ -32,28 +32,28 @@ class App extends Component {
               <li className="website">
                 <i className="fas fa-globe" />
                 <a
-                  href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/orbit-free-resume-cv-bootstrap-theme-for-developers/"
+                  href={resume.website}
                   target="_blank"
                 >
-                  portfoliosite.com
+                  {resume.website}
                 </a>
               </li>
               <li className="linkedin">
                 <i className="fab fa-linkedin-in" />
-                <a href="#" target="_blank">
-                  linkedin.com/in/alandoe
+                <a href="{resume.linkedIn}" target="_blank">
+                  {resume.linkedIn}
                 </a>
               </li>
               <li className="github">
                 <i className="fab fa-github" />
-                <a href="#" target="_blank">
-                  github.com/username
+                <a href="{resume.twitter}" target="_blank">
+                  {resume.twitter}
                 </a>
               </li>
               <li className="twitter">
                 <i className="fab fa-twitter" />
-                <a href="https://twitter.com/3rdwave_themes" target="_blank">
-                  @twittername
+                <a href="{resume.twitterUrl}" target="_blank">
+                  {resume.twitterUrl}
                 </a>
               </li>
             </ul>
@@ -61,40 +61,39 @@ class App extends Component {
 
           <div className="education-container container-block">
             <h2 className="container-block-title">Education</h2>
-            <div className="item">
-              <h4 className="degree">MSc in Computer Science</h4>
-              <h5 className="meta">University of London</h5>
-              <div className="time">2011 - 2012</div>
-            </div>
-
-            <div className="item">
-              <h4 className="degree">BSc in Applied Mathematics</h4>
-              <h5 className="meta">Bristol University</h5>
-              <div className="time">2007 - 2011</div>
-            </div>
+            {resume.education.map(edu => (
+              <div className="item">
+                <h4 className="degree">{edu.degree}</h4>
+                <h5 className="meta">{edu.university}</h5>
+                <div className="time">{edu.period}</div>
+              </div>
+            ))}
           </div>
+          {/* 
+            <div className="item">
+            <h4 className="degree">BSc in Applied Mathematics</h4>
+           <h5 className="meta">Bristol University</h5>
+             <div className="time">2007 - 2011</div>
+           </div>
+           </div> */}
 
           <div className="languages-container container-block">
             <h2 className="container-block-title">Languages</h2>
             <ul className="list-unstyled interests-list">
-              <li>
-                English <span className="lang-desc">(Native)</span>
-              </li>
-              <li>
-                French <span className="lang-desc">(Professional)</span>
-              </li>
-              <li>
-                Spanish <span className="lang-desc">(Professional)</span>
-              </li>
+              {resume.languages.map(lang => (
+                <li>
+                  {lang.name} {""}<span className="lang-desc">({lang.details})</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="interests-container container-block">
             <h2 className="container-block-title">Interests</h2>
             <ul className="list-unstyled interests-list">
-              <li>Climbing</li>
-              <li>Snowboarding</li>
-              <li>Cooking</li>
+              {resume.interests.map(int => (
+                <li>{int}</li>
+              ))}
             </ul>
           </div>
         </div>

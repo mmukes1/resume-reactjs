@@ -2,5 +2,80 @@
   "name": "Meenakshi Mukesh Kumar",
   "jobRole": "Software Engineer",
   "contactEmail": "meenakshi.mk33@gmail.com",
-  "phoneNumber": "610-316-0060"
+  "phoneNumber": "610-316-0060",
+  "image": "assets/images/profile.png",
+  "website": "www.meenakshiresume.com",
+  "linkedIn": "linkedIn.com/mmeenakshi",
+  "twitter": "meenakshicom",
+  "twitterUrl": "www.meenakshi.com",
+  "expirences": [
+    {
+      "title": "software Engineer Level 1",
+      "period": "2018-present",
+      "company": "Sage Dining Servies",
+      "companyURL": "https://www.sagedining.com/",
+      "details": "react js developer"
+    },
+    {
+      "title": "Sofware Developer",
+      "period": "2017-2018",
+      "company": "Electronic Billing and customer Support",
+      "companyURL": "https://ebcs.com",
+      "details": "web develeper"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Velocity",
+      "url": "www.velocity.com",
+      "details": "a responsible website"
+    },
+    {
+      "name": "DevStudio",
+      "url": "www.devstudio.com",
+      "details": "a responsible website for dev studio "
+    }
+  ],
+  "skills": [
+    {
+      "name": "Javacsript & Jquery",
+      "percent": "90%"
+    },
+    {
+      "name": "React -JS",
+      "percent": "60%"
+    },
+    {
+      "name": "HTML & CSS",
+      "percent": "90"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Applied Information Technology",
+      "university": "Towson University",
+      "period": "2015-2017"
+    },
+    {
+      "degree": "MBA",
+      "university": "University of Toldeo",
+      "period": "2010-2012"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "details": "native"
+    },
+    {
+      "name": "Hindi",
+      "details": "native"
+    }
+  ],
+  "interests": [
+    "climbing",
+    "snorkelling",
+    "cooking",
+    "coding"
+  ]
 }
