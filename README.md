@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created on the React js  to build the resume database
 
 ## Available Scripts
 
